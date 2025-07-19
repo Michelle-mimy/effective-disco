@@ -1,0 +1,87 @@
+a program for a scoring system.
+Pseudocode
+
+START
+
+FUNCTION calculate_grade(score):
+    IF score IS BETWEEN 70 AND 100 (INCLUSIVE):
+        RETURN "A"
+    ELSE IF score IS BETWEEN 60 AND 69 (INCLUSIVE):
+        RETURN "B"
+    ELSE IF score IS BETWEEN 50 AND 59 (INCLUSIVE):
+        RETURN "C"
+    ELSE IF score IS BETWEEN 45 AND 49 (INCLUSIVE):
+        RETURN "D"
+    ELSE IF score IS BETWEEN 40 AND 44 (INCLUSIVE):
+        RETURN "E"
+    ELSE IF score IS BETWEEN 0 AND 39 (INCLUSIVE):
+        RETURN "F"
+    ELSE:
+        RETURN "Invalid Score"
+
+PROGRAM main:
+    DISPLAY "Enter the student's score: "
+    READ score
+
+    IF score IS A NUMBER:
+        grade = calculate_grade(score)
+        DISPLAY "The grade for the score " + score + " is: " + grade
+    ELSE:
+        DISPLAY "Invalid input. Please enter a numerical score."
+
+END
+
+Python Translation
+def calculate_grade(score):
+    """
+    Calculates the letter grade based on the given score.
+    """
+    if 70 <= score <= 100:
+        return "A"
+    elif 60 <= score <= 69:
+        return "B"
+    elif 50 <= score <= 59:
+        return "C"
+    elif 45 <= score <= 49:
+        return "D"
+    elif 40 <= score <= 44:
+        return "E"
+    elif 0 <= score <= 39:
+        return "F"
+    else:
+        return "Invalid Score"
+
+def main():
+    """
+    Main function to get user input and display the grade.
+    """
+    try:
+        score_input = input("Enter the student's score: ")
+        score = int(score_input)  # Attempt to convert input to an integer
+
+        grade = calculate_grade(score)
+        print(f"The grade for the score {score} is: {grade}")
+    except ValueError:
+        print("Invalid input. Please enter a numerical score.")
+
+if __name__ == "__main__":
+    main()a program for a scoring system.
+Pseudocode
+
+START
+
+FUNCTION calculate_grade(score):
+    IF score IS BETWEEN 70 AND 100 (INCLUSIVE):
+        RETURN "A"
+    ELSE IF score IS BETWEEN 60 AND 69 (INCLUSIVE):
+        RETURN "B"
+    ELSE IF score IS BETWEEN 50 AND 59 (INCLUSIVE):
+        RETURN "C"
+    ELSE IF score IS BETWEEN 45 AND 49 (INCLUSIVE):
+        RETURN "D"
+    ELSE IF score IS BETWEEN 40 AND 44 (INCLUSIVE):
+        RETURN "E"
+    ELSE IF score IS BETWEEN 0 AND 39 (INCLUSIVE):
+        RETURN "F"
+    ELSE:
+        RETURN "Invalid Score"
